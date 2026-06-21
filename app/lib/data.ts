@@ -20,8 +20,10 @@ export async function fetchRevenue() {
     // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
-    console.log('======');
+    /* console.log('======');
     console.log(data);
+    const updateData = { revenue: 5000 }
+    await sql<Revenue[]>`UPDATE revenue SET ${sql(updateData)} WHERE month = 'Jan'`; */
 
     // console.log('Data fetch completed after 3 seconds.');
 
